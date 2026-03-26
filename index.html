@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unique Integration — متجر إلكتروني</title>
+  <link rel="icon" href="Logoui.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <span data-ar="شحن مجاني للطلبات فوق 200 ر.س — استخدم الكود" data-en="Free shipping on orders over 200 SAR — Use code"><i class="fas fa-gift"></i> شحن مجاني للطلبات فوق 200 ر.س — استخدم الكود</span>
+    <span class="code">UNIQUE50</span>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="Logoui.png" alt="Unique Integration" />
+      </a>
+
+      <div class="search-box">
+        <input type="text" id="searchInput" data-placeholder-ar="ابحث عن منتجات..." data-placeholder-en="Search products..." placeholder="ابحث عن منتجات..." />
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+        <div class="search-results" id="searchResults"></div>
+      </div>
+
+      <div class="header-actions">
+        <button class="header-btn" id="wishlistBtn" title="المفضلة">
+          <i class="far fa-heart"></i>
+        </button>
+        <button class="header-btn" id="cartBtn" title="سلة التسوق">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="badge" id="cartCount">0</span>
+        </button>
+        <button class="header-btn" title="حسابي">
+          <i class="far fa-user"></i>
+        </button>
+        <button class="lang-btn" id="langToggle" onclick="toggleLang()">EN</button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-links" id="navLinks">
+        <a href="#hero"><i class="fas fa-home"></i> <span data-ar="الرئيسية" data-en="Home">الرئيسية</span></a>
+        <a href="#categories"><i class="fas fa-th-large"></i> <span data-ar="الأقسام" data-en="Categories">الأقسام</span></a>
+        <a href="#featured"><i class="fas fa-star"></i> <span data-ar="منتجات مميزة" data-en="Featured">منتجات مميزة</span></a>
+        <a href="#offers"><i class="fas fa-tags"></i> <span data-ar="العروض" data-en="Offers">العروض</span></a>
+        <a href="#new-arrivals"><i class="fas fa-bolt"></i> <span data-ar="وصل حديثاً" data-en="New Arrivals">وصل حديثاً</span></a>
+        <a href="#contact"><i class="fas fa-envelope"></i> <span data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SLIDER -->
+  <section class="hero" id="hero">
+    <div class="hero-slides" id="heroSlides">
+      <div class="hero-slide">
+        <div class="hero-content">
+          <span class="badge-tag"><i class="fas fa-shopping-bag"></i> <span data-ar="تسوق الآن" data-en="Shop Now">تسوق الآن</span></span>
+          <h1 data-ar="أفضل المنتجات بأسعار لا تُقاوم" data-en="Best Products at Unbeatable Prices">أفضل المنتجات بأسعار لا تُقاوم</h1>
+          <p data-ar="اكتشف مجموعة واسعة من المنتجات المميزة والعلامات التجارية العالمية مع شحن سريع لجميع أنحاء المملكة" data-en="Discover a wide range of premium products and global brands with fast shipping across Saudi Arabia">اكتشف مجموعة واسعة من المنتجات المميزة والعلامات التجارية العالمية مع شحن سريع لجميع أنحاء المملكة</p>
+          <div class="hero-btns">
+            <a href="#featured" class="btn-hero btn-hero-primary"><span data-ar="تسوق الآن" data-en="Shop Now">تسوق الآن</span> <i class="fas fa-arrow-left"></i></a>
+            <a href="#offers" class="btn-hero btn-hero-outline"><span data-ar="عروض اليوم" data-en="Today's Deals">عروض اليوم</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-slide">
+        <div class="hero-content">
+          <span class="badge-tag"><i class="fas fa-gamepad"></i> <span data-ar="جديد" data-en="New">جديد</span></span>
+          <h1 data-ar="أحدث الإلكترونيات والألعاب" data-en="Latest Electronics & Games">أحدث الإلكترونيات والألعاب</h1>
+          <p data-ar="سماعات بلوتوث، ساعات ذكية، ألعاب تفاعلية والمزيد — كل ما تحتاجه في مكان واحد" data-en="Bluetooth headphones, smart watches, interactive games and more — everything you need in one place">سماعات بلوتوث، ساعات ذكية، ألعاب تفاعلية والمزيد — كل ما تحتاجه في مكان واحد</p>
+          <div class="hero-btns">
+            <a href="#categories" class="btn-hero btn-hero-primary"><span data-ar="تصفح الأقسام" data-en="Browse Categories">تصفح الأقسام</span> <i class="fas fa-arrow-left"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-slide">
+        <div class="hero-content">
+          <span class="badge-tag"><i class="fas fa-gift"></i> <span data-ar="عروض حصرية" data-en="Exclusive Offers">عروض حصرية</span></span>
+          <h1 data-ar="خصومات تصل إلى 50% على الهدايا" data-en="Up to 50% Off on Gifts">خصومات تصل إلى 50% على الهدايا</h1>
+          <p data-ar="اختر هديتك المثالية من تشكيلة واسعة من الهدايا الفريدة والمميزة لكل المناسبات" data-en="Choose your perfect gift from a wide selection of unique gifts for all occasions">اختر هديتك المثالية من تشكيلة واسعة من الهدايا الفريدة والمميزة لكل المناسبات</p>
+          <div class="hero-btns">
+            <a href="#featured" class="btn-hero btn-hero-primary"><span data-ar="اكتشف العروض" data-en="Discover Offers">اكتشف العروض</span> <i class="fas fa-arrow-left"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="hero-arrow hero-arrow-prev" onclick="prevSlide()"><i class="fas fa-chevron-right"></i></button>
+    <button class="hero-arrow hero-arrow-next" onclick="nextSlide()"><i class="fas fa-chevron-left"></i></button>
+    <div class="hero-dots" id="heroDots"></div>
+  </section>
+
+  <!-- FEATURES BAR -->
+  <section class="features-bar">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fas fa-truck-fast"></i></div>
+          <div class="feature-text">
+            <h4 data-ar="توصيل سريع" data-en="Fast Delivery">توصيل سريع</h4>
+            <p data-ar="شحن لجميع مناطق المملكة" data-en="Shipping across Saudi Arabia">شحن لجميع مناطق المملكة</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fas fa-shield-halved"></i></div>
+          <div class="feature-text">
+            <h4 data-ar="دفع آمن" data-en="Secure Payment">دفع آمن</h4>
+            <p data-ar="تشفير كامل للمعاملات" data-en="Fully encrypted transactions">تشفير كامل للمعاملات</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fas fa-rotate-left"></i></div>
+          <div class="feature-text">
+            <h4 data-ar="إرجاع مجاني" data-en="Free Returns">إرجاع مجاني</h4>
+            <p data-ar="خلال 14 يوم من الاستلام" data-en="Within 14 days of delivery">خلال 14 يوم من الاستلام</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fas fa-headset"></i></div>
+          <div class="feature-text">
+            <h4 data-ar="دعم 24/7" data-en="24/7 Support">دعم 24/7</h4>
+            <p data-ar="فريق دعم متاح دائماً" data-en="Support team always available">فريق دعم متاح دائماً</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="categories" id="categories">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-ar="تسوق حسب القسم" data-en="Shop by Category">تسوق حسب القسم</h2>
+        <p data-ar="اختر القسم المناسب واستكشف منتجاتنا المميزة" data-en="Choose a category and explore our premium products">اختر القسم المناسب واستكشف منتجاتنا المميزة</p>
+      </div>
+      <div class="categories-grid">
+        <div class="category-card">
+          <div class="category-icon"><i class="fas fa-microchip"></i></div>
+          <h3 data-ar="إلكترونيات" data-en="Electronics">إلكترونيات</h3>
+          <p data-ar="أجهزة وملحقات" data-en="Devices & Accessories">أجهزة وملحقات</p>
+        </div>
+        <div class="category-card">
+          <div class="category-icon"><i class="fas fa-bag-shopping"></i></div>
+          <h3 data-ar="حقائب" data-en="Bags">حقائب</h3>
+          <p data-ar="حقائب أنيقة" data-en="Stylish Bags">حقائب أنيقة</p>
+        </div>
+        <div class="category-card">
+          <div class="category-icon"><i class="fas fa-gift"></i></div>
+          <h3 data-ar="هدايا" data-en="Gifts">هدايا</h3>
+          <p data-ar="لكل المناسبات" data-en="For All Occasions">لكل المناسبات</p>
+        </div>
+        <div class="category-card">
+          <div class="category-icon"><i class="fas fa-gem"></i></div>
+          <h3 data-ar="إكسسوارات" data-en="Accessories">إكسسوارات</h3>
+          <p data-ar="تصاميم فريدة" data-en="Unique Designs">تصاميم فريدة</p>
+        </div>
+        <div class="category-card">
+          <div class="category-icon"><i class="fas fa-gamepad"></i></div>
+          <h3 data-ar="ألعاب" data-en="Games">ألعاب</h3>
+          <p data-ar="ترفيه ومتعة" data-en="Fun & Entertainment">ترفيه ومتعة</p>
+        </div>
+        <div class="category-card">
+          <div class="category-icon"><i class="fas fa-pen-ruler"></i></div>
+          <h3 data-ar="قرطاسية" data-en="Stationery">قرطاسية</h3>
+          <p data-ar="أدوات مكتبية" data-en="Office Supplies">أدوات مكتبية</p>
+        </div>
+        <div class="category-card">
+          <div class="category-icon"><i class="fas fa-spray-can-sparkles"></i></div>
+          <h3 data-ar="عطور" data-en="Perfumes">عطور</h3>
+          <p data-ar="عطور فاخرة" data-en="Luxury Perfumes">عطور فاخرة</p>
+        </div>
+        <div class="category-card">
+          <div class="category-icon"><i class="fas fa-couch"></i></div>
+          <h3 data-ar="ديكور" data-en="Home Décor">ديكور</h3>
+          <p data-ar="لمسات جميلة" data-en="Beautiful Touches">لمسات جميلة</p>
+        </div>
+        <div class="category-card">
+          <div class="category-icon"><i class="fas fa-futbol"></i></div>
+          <h3 data-ar="رياضة" data-en="Sports">رياضة</h3>
+          <p data-ar="معدات رياضية" data-en="Sports Equipment">معدات رياضية</p>
+        </div>
+        <div class="category-card">
+          <div class="category-icon"><i class="fas fa-shirt"></i></div>
+          <h3 data-ar="ملابس" data-en="Clothing">ملابس</h3>
+          <p data-ar="أزياء عصرية" data-en="Modern Fashion">أزياء عصرية</p>
+        </div>
+        <div class="category-card">
+          <div class="category-icon"><i class="fas fa-child-reaching"></i></div>
+          <h3 data-ar="أطفال" data-en="Kids">أطفال</h3>
+          <p data-ar="كل ما يحتاجه طفلك" data-en="Everything for Your Child">كل ما يحتاجه طفلك</p>
+        </div>
+        <div class="category-card">
+          <div class="category-icon"><i class="fas fa-book-open"></i></div>
+          <h3 data-ar="كتب" data-en="Books">كتب</h3>
+          <p data-ar="معرفة وثقافة" data-en="Knowledge & Culture">معرفة وثقافة</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMO BANNERS -->
+  <section class="promo-banners">
+    <div class="container">
+      <div class="promo-grid">
+        <div class="promo-card promo-card--phone">
+          <div class="promo-card-content">
+            <span class="promo-badge"><i class="fas fa-mobile-screen-button"></i> <span data-ar="إكسسوارات الهاتف" data-en="Phone Accessories">إكسسوارات الهاتف</span></span>
+            <h3 data-ar="حافظات وملحقات للهاتف" data-en="Phone Cases & Accessories">حافظات وملحقات للهاتف</h3>
+            <p data-ar="تشكيلة واسعة لجميع الأجهزة بتصاميم عصرية" data-en="Wide selection for all devices with modern designs">تشكيلة واسعة لجميع الأجهزة بتصاميم عصرية</p>
+            <a href="#" class="promo-btn"><span data-ar="تسوق الآن" data-en="Shop Now">تسوق الآن</span> <i class="fas fa-arrow-left"></i></a>
+          </div>
+          <div class="promo-card-image">
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=500&fit=crop" alt="Phone" loading="lazy" />
+          </div>
+        </div>
+        <div class="promo-card promo-card--gift">
+          <div class="promo-card-content">
+            <span class="promo-badge"><i class="fas fa-gift"></i> <span data-ar="هدايا مميزة" data-en="Premium Gifts">هدايا مميزة</span></span>
+            <h3 data-ar="أفكار هدايا لكل مناسبة" data-en="Gift Ideas for Every Occasion">أفكار هدايا لكل مناسبة</h3>
+            <p data-ar="خصومات تصل إلى 40% على الهدايا المختارة" data-en="Up to 40% off on selected gifts">خصومات تصل إلى 40% على الهدايا المختارة</p>
+            <a href="#" class="promo-btn"><span data-ar="اكتشف المزيد" data-en="Discover More">اكتشف المزيد</span> <i class="fas fa-arrow-left"></i></a>
+          </div>
+          <div class="promo-card-image">
+            <img src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=400&h=500&fit=crop" alt="Gifts" loading="lazy" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="products-section" id="featured">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-ar="منتجات مميزة" data-en="Featured Products">منتجات مميزة</h2>
+        <p data-ar="اكتشف أكثر المنتجات مبيعاً في متجرنا" data-en="Discover our best-selling products">اكتشف أكثر المنتجات مبيعاً في متجرنا</p>
+      </div>
+      <div class="products-grid" id="featuredGrid"></div>
+    </div>
+  </section>
+
+  <!-- OFFER BANNER -->
+  <section class="offer-section" id="offers">
+    <div class="container">
+      <div class="offer-banner">
+        <h2><i class="fas fa-fire"></i> <span data-ar="عروض اليوم — خصومات تصل إلى 50%" data-en="Today's Deals — Up to 50% Off">عروض اليوم — خصومات تصل إلى 50%</span></h2>
+        <p data-ar="خصومات حصرية تنتهي قريباً — اغتنم الفرصة الآن" data-en="Exclusive discounts ending soon — Grab them now">خصومات حصرية تنتهي قريباً — اغتنم الفرصة الآن</p>
+        <div class="countdown" id="countdown">
+          <div class="countdown-box">
+            <div class="number" id="hours">00</div>
+            <div class="label" data-ar="ساعة" data-en="Hours">ساعة</div>
+          </div>
+          <div class="countdown-box">
+            <div class="number" id="minutes">00</div>
+            <div class="label" data-ar="دقيقة" data-en="Minutes">دقيقة</div>
+          </div>
+          <div class="countdown-box">
+            <div class="number" id="seconds">00</div>
+            <div class="label" data-ar="ثانية" data-en="Seconds">ثانية</div>
+          </div>
+        </div>
+        <a href="#featured" class="promo-btn offer-btn"><span data-ar="تسوق العروض" data-en="Shop Deals">تسوق العروض</span> <i class="fas fa-arrow-left"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW ARRIVALS -->
+  <section class="products-section" id="new-arrivals">
+    <div class="container">
+      <div class="section-title">
+        <h2 data-ar="وصل حديثاً" data-en="New Arrivals">وصل حديثاً</h2>
+        <p data-ar="أحدث المنتجات التي أضفناها لمتجرنا" data-en="The latest products added to our store">أحدث المنتجات التي أضفناها لمتجرنا</p>
+      </div>
+      <div class="products-grid" id="newArrivalsGrid"></div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="why-us-section">
+    <div class="container">
+      <div class="why-us-grid">
+        <div class="why-us-item">
+          <div class="why-us-icon"><i class="fas fa-shield-halved"></i></div>
+          <h3 data-ar="الجودة" data-en="Quality">الجودة</h3>
+          <p data-ar="أفضل المنتجات وجودة عالية" data-en="Best products with high quality">أفضل المنتجات وجودة عالية</p>
+        </div>
+        <div class="why-us-item">
+          <div class="why-us-icon"><i class="fas fa-truck-fast"></i></div>
+          <h3 data-ar="الشحن" data-en="Shipping">الشحن</h3>
+          <p data-ar="الشحن السريع في أسرع وقت ممكن" data-en="Fast shipping in the shortest time possible">الشحن السريع في أسرع وقت ممكن</p>
+        </div>
+        <div class="why-us-item">
+          <div class="why-us-icon"><i class="fas fa-headset"></i></div>
+          <h3 data-ar="دعم فني" data-en="Support">دعم فني</h3>
+          <p data-ar="خدمة العملاء على مدار الساعة" data-en="Customer service around the clock">خدمة العملاء على مدار الساعة</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-about">
+          <h3 data-ar="عن Unique Integration" data-en="About Unique Integration">عن Unique Integration</h3>
+          <p data-ar="متجر إلكتروني سعودي يقدم أفضل المنتجات والعلامات التجارية العالمية بأسعار تنافسية مع خدمة عملاء متميزة وتوصيل سريع لجميع مناطق المملكة." data-en="A Saudi online store offering the best products and global brands at competitive prices with excellent customer service and fast delivery across Saudi Arabia.">متجر إلكتروني سعودي يقدم أفضل المنتجات والعلامات التجارية العالمية بأسعار تنافسية مع خدمة عملاء متميزة وتوصيل سريع لجميع مناطق المملكة.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-snapchat-ghost"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3 data-ar="روابط مهمة" data-en="Important Links">روابط مهمة</h3>
+          <ul>
+            <li><a href="#" data-ar="سياسة الخصوصية" data-en="Privacy Policy">سياسة الخصوصية</a></li>
+            <li><a href="#" data-ar="شروط الاستخدام" data-en="Terms of Service">شروط الاستخدام</a></li>
+            <li><a href="#" data-ar="سياسة الإرجاع" data-en="Return Policy">سياسة الإرجاع</a></li>
+            <li><a href="#" data-ar="الأسئلة الشائعة" data-en="FAQ">الأسئلة الشائعة</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 data-ar="أقسام المتجر" data-en="Store Categories">أقسام المتجر</h3>
+          <ul>
+            <li><a href="#" data-ar="إلكترونيات" data-en="Electronics">إلكترونيات</a></li>
+            <li><a href="#" data-ar="حقائب وإكسسوارات" data-en="Bags & Accessories">حقائب وإكسسوارات</a></li>
+            <li><a href="#" data-ar="هدايا" data-en="Gifts">هدايا</a></li>
+            <li><a href="#" data-ar="ألعاب" data-en="Games">ألعاب</a></li>
+            <li><a href="#" data-ar="عطور" data-en="Perfumes">عطور</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</h3>
+          <ul class="footer-contact">
+            <li><i class="fas fa-phone"></i> <span>+966 50 000 0000</span></li>
+            <li><i class="fas fa-envelope"></i> <span>info@ui.sa</span></li>
+            <li><i class="fas fa-map-marker-alt"></i> <span data-ar="المملكة العربية السعودية" data-en="Saudi Arabia">المملكة العربية السعودية</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-ar="© 2026 Unique Integration — جميع الحقوق محفوظة" data-en="© 2026 Unique Integration — All Rights Reserved">© 2026 Unique Integration — جميع الحقوق محفوظة</p>
+        <div class="payment-methods">
+          <span class="payment-icon">مدى</span>
+          <span class="payment-icon">VISA</span>
+          <span class="payment-icon">MC</span>
+          <span class="payment-icon"><i class="fab fa-apple"></i> Pay</span>
+          <span class="payment-icon">STC Pay</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3><i class="fas fa-shopping-bag"></i> <span data-ar="سلة التسوق" data-en="Shopping Cart">سلة التسوق</span></h3>
+      <button class="cart-close" id="cartClose"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty" id="cartEmpty">
+        <i class="fas fa-shopping-bag"></i>
+        <p data-ar="سلة التسوق فارغة" data-en="Your cart is empty">سلة التسوق فارغة</p>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span data-ar="الإجمالي:" data-en="Total:">الإجمالي:</span>
+        <span id="cartTotal">0 <span data-ar="ر.س" data-en="SAR">ر.س</span></span>
+      </div>
+      <button class="checkout-btn">
+        <span data-ar="إتمام الشراء" data-en="Checkout">إتمام الشراء</span> <i class="fas fa-arrow-left"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- TOAST CONTAINER -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- SCROLL TO TOP -->
+  <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="app.js"></script>
+</body>
+</html>
